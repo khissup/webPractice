@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>body tag</title>
+	
+	<style type="text/css">
+	.common { background-color: steelblue; color: white; }
+	#private { background-color: magenta; }
+	</style>
+</head>
+<body>
+	<h3>문단의 제목이 들어간다.</h3>
+	<span class="common">공통부분 1(같은 속성)</span>
+	<span class="common">공통부분 2(같은 속성)</span>
+	<span class="common">공통부분 3(같은 속성)</span>
+	<span class="common">공통부분 4(같은 속성)</span>
+	
+	<p id="private">독립속성(중복 X)</p>
+	
+	<h3>title</h3>
+	<!-- span * 4 하면 아래처럼 span 4개 만들어짐-->
+	<span></span><span></span><span></span><span></span>
+	<!--span.common*4 하면 아래처럼 만들어짐-->
+	<span class="common"></span><span class="common"></span><span class="common"></span><span class="common"></span>
+	<!--span.common*4>{공통부분 $ (같은 속성)}-->
+	<span class="common">공통부분 1 (같은 속성)</span><span class="common">공통부분 2 (같은 속성)</span><span class="common">공통부분 3 (같은 속성)</span><span class="common">공통부분 4 (같은 속성)</span>
+	<!--div#divid.class1.class2>div+div+div.class5-->
+	<div id="divid" class="class1 class2">
+		<div></div>
+		<div></div>
+		<div class="class5"></div>
+	</div>
+	<!--ctrl + alt 하면 영역이 동시에 잡힘.-->
+	<!--table>tr*5>td*7-->
+	<script>
+		// let spans = document.querySelectorAll(".common");
+		// for(let i = 0; i < spans.length; i++) {
+		// 	spans[i].addEventListener("click", function() {
+		// 		alert("push???");
+		// 	});
+		// }
+		document.querySelector(".common").addEventListener("click", () => alert("df"));
+		
+	</script>
+	<table>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+</body>
+</html>

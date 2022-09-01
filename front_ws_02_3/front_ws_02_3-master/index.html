@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="img/x-icon" href="./img/favicon.ico">
+  <!-- <link rel="stylesheet" href="css/main.css"> -->
+  <title>BookCafe</title>
+</head>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  /* 여백 까지 박스 사이즈에 포함 하기  */
+  box-sizing: border-box;
+  /* 리스트 요소의 스타일을 없앤다. (기본 : 점) */
+  list-style: none;
+  }
+  .nav {
+  position: relative;
+  margin: auto;
+  max-width: 1200px;
+  width: calc(100%-120px);
+  height: 70px;
+  }
+  ul.franchise li{
+    text-indent: 20px;
+    margin-top: 10px;
+  }
+
+
+  a {
+    /* 앵커 태그의 text 스타일을 없앤다. */
+    text-decoration: none;
+  }
+  
+  div.right img {
+    width: 150px;
+    height: 200px;
+  }
+  header {
+    box-shadow: 0px 1px 10px rgba(100, 90, 50, 0.3);
+    width: calc(100%-120px);
+    margin: 0 auto;  
+    height: 70px;
+  }
+  .nav {
+    max-width: 900px;
+  }
+  .content {
+    max-width: 900px;
+    margin: 10px  auto;
+  }
+  .content-left {
+    margin: 0;
+    float: left;
+    width: 29%;
+  }
+  .content-right {
+    margin: 0;
+    
+    width: 70%;
+  }
+  header a {
+    color: gray;
+  }
+  header a.title {
+    /* float: left; */
+    margin-right: 10px;
+    font-size: 30px;
+  }
+  footer {
+    max-width: 900px;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+  }
+  .menu li {
+    float: left;
+    margin-left: 20px;
+  }
+  #people {
+    
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  #lion {
+    
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .open-shop-list {
+    padding-top: 10px;
+    text-align: center;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #BDBDBD;
+  }
+  
+  .shop-list {
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #EAEAEA;
+  }
+  
+  .choice {
+    margin-top: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .choice-title {
+    margin: 10px;
+    text-align: center;
+  }
+  .choice-border {
+    font-weight: bold;
+  }
+  .button-class {
+    margin: 10px;
+    text-align: right;
+    
+  }
+  .tupyo {
+    border: none;
+    color: white;
+    background-color: purple;
+    width: 70px;
+    height: 25px;
+  }
+  .result {
+    border: 1px solid black;
+    background-color: white;
+    width: 70px;
+    height: 25px;
+  }
+  .button-text {
+    font-weight: bold;
+  }
+  .choice img {
+    width: 50px;
+  }
+  section img {
+    width: 100px;
+  }
+  .book {
+    border: 1px double #EAEAEA;
+    display: inline-block;
+    font-size: 5px;
+    text-align: center;
+  }
+  .book-price {
+    text-align: center;
+  }
+  .section {
+    display: inline;
+  }
+</style>
+<body>
+  <header>
+    <div class="nav">
+      <div>
+        <a class="title" href="#">SSAFY BookCafe</a>
+        <a href="#">공지사항</a>
+      </div>
+      <ul class="menu">
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+        <li><a href="#">로그아웃</a></li>
+        <li><a href="#">마이페이지</a></li>
+        <li><a href="#">관리자</a></li>
+      </ul>
+    </div>
+  </header>
+  <div>
+    <div class="content">
+      <div class="content-left">
+        <div>
+          <img id="people" src="img/noimg.png" width="120" alt="">
+          <img id="lion" src="img/profile.png" width="120" alt="">
+        </div>
+        <div>
+          <div class="open-shop-list">전국매장펼치기</div>
+          <!-- <div class="close-shop-list">전국매장접기</div> -->
+          <ul>
+            <li class="shop-list">
+              <a>서울</a>
+              <div>
+                <ul class="franchise">
+                  <li>역삼점</li>
+                  <li>선릉점</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul>
+            <li class="shop-list">
+              <a>서울</a>
+              <div>
+                <ul class="franchise">
+                  <li>역삼점</li>
+                  <li>선릉점</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul>
+            <li class="shop-list">
+              <a>서울</a>
+              <div>
+                <ul class="franchise">
+                  <li>역삼점</li>
+                  <li>선릉점</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul>
+            <li class="shop-list">
+              <a>서울</a>
+              <div>
+                <ul class="franchise">
+                  <li>역삼점</li>
+                  <li>선릉점</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="choice">
+          <div class="choice-title">[ 당신의 선택 ]</div>
+          <div class="choice-border">공부하고 싶은 분야를 골라 주세요!!!</div>
+          <div>
+            <ul>
+              <li>
+                <input type="radio" name="p" id="">
+                <img src="img/poll/python.png" width="70" alt="">python
+              </li>
+              <li>
+                <input type="radio" name="p" id="">
+                <img src="img/poll/java.png" width="70" alt="">java
+              </li>
+              <li>
+                <input type="radio" name="p" id="">
+                <img src="img/poll/vuejs.png" width="70" alt="">vuejs
+              </li>
+              <li>
+                <input type="radio" name="p" id="">
+                <img src="img/poll/html5.png" width="70" alt="">html5
+              </li>
+            </ul>
+          </div>
+          <div class="button-class">
+            <button class="tupyo">투표하기</button>
+            <button class="result">결과보기</button>
+          </div>
+          <div class="button-text">투표기간 : 22.09.01 ~ 22.09.31</div>
+        </div>
+      </div>
+      <div class="content-right">
+        <!--section, footer 이런것도 걍 div랑 기능은 아예똑같음. 의미상으로 강조해놓는것뿐임.
+        메인컨텐츠에서 데이터를 표현하려하는 div다.. 정도의 의미-->
+        <section>
+          <h3>[프로그래밍]</h3>
+          <ul>
+            <li class="book">
+              <div>
+                <img src="img/book/p_book01.png" alt="" width="">
+              </div>
+              <div>Do it! 점프 투 파이썬</div>
+              <div class="book-price">(18,800원)</div>
+            </li>
+            <li class="book">
+              <div>
+                <img src="img/book/p_book02.png" alt="" width="">
+              </div>
+              <div>HTML5 API 프로그래밍</div>
+              <div class="book-price">(18,800원)</div>
+            </li>
+            <li class="book">
+              <div>
+                <img src="img/book/p_book03.png" alt="" width="">
+              </div>
+              <div>백견불여일타 Vue.js입문</div>
+              <div class="book-price">(18,800원)</div>
+            </li>
+            <li class="book">
+              <div>
+                <img src="img/book/p_book04.png" alt="" width="">
+              </div>
+              <div>Java 프로그래밍</div>
+              <div class="book-price">(18,800원)</div>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>[프로그래밍]</h3>
+          <ul>
+            <li class="book">
+              <div>
+                <img src="img/book/p_book01.png" alt="" width="">
+              </div>
+              <div>Do it! 점프 투 파이썬</div>
+              <div class="book-price">(18,800원)</div>
+            </li>
+            <li class="book">
+              <div>
+                <img src="img/book/p_book02.png" alt="" width="">
+              </div>
+              <div>HTML5 API 프로그래밍</div>
+              <div class="book-price">(18,800원)</div>
+            </li>
+            <li class="book">
+              <div>
+                <img src="img/book/p_book03.png" alt="" width="">
+              </div>
+              <div>백견불여일타 Vue.js입문</div>
+              <div class="book-price">(18,800원)</div>
+            </li>
+            <li class="book">
+              <div>
+                <img src="img/book/p_book04.png" alt="" width="">
+              </div>
+              <div>Java 프로그래밍</div>
+              <div class="book-price">(18,800원)</div>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <article>
+            <h3>[인기글]</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>제목</th>
+                  <th>작성자</th>
+                  <th>조회수</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>......</td>
+                  <td>홍길동</td>
+                  <td>1888</td>
+                </tr>
+                <tr>
+                  <td>......</td>
+                  <td>고길동</td>
+                  <td>188</td>
+                </tr>
+                <tr>
+                  <td>......</td>
+                  <td>이길동</td>
+                  <td>2000</td>
+                </tr>
+                <tr>
+                  <td>......</td>
+                  <td>박길동</td>
+                  <td>500</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <article>
+            <h3>[최신글]</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>제목</th>
+                  <th>작성자</th>
+                  <th>조회수</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>......</td>
+                  <td>홍길동</td>
+                  <td>1888</td>
+                </tr>
+                <tr>
+                  <td>......</td>
+                  <td>고길동</td>
+                  <td>188</td>
+                </tr>
+                <tr>
+                  <td>......</td>
+                  <td>이길동</td>
+                  <td>2000</td>
+                </tr>
+                <tr>
+                  <td>......</td>
+                  <td>박길동</td>
+                  <td>500</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+      </div>
+    </div>
+    
+  </div>
+  <footer>
+    <ul>
+      <li><a href="#">카페소개</a></li>
+      <li><a href="#">개인정보처리방침</a></li>
+      <li><a href="#">이용약관</a></li>
+      <li><a href="#">오시는길</a></li>
+      <li>&copy; SSAFY Corp.</li>
+    </ul>
+  </footer>
+</body>
+</html>
